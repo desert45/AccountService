@@ -11,3 +11,16 @@ public class AccountApplication {
 	}
 
 }
+
+@RefreshScope
+@RestController
+class MessageRestController {
+
+    @Value("${service.name}")
+    private String name;
+
+    @RequestMapping("/name")
+    String getMessage() {
+        return this.name;
+    }
+}
