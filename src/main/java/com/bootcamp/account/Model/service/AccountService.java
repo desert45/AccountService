@@ -14,4 +14,6 @@ public interface AccountService {
   Mono<Boolean> existsById(String id) throws Exception;
   Mono<Void> deleteById(String id) throws Exception;
   Mono<Account> update (String id, Account account) throws Exception;
+  Flux<Account> findByDocumentNumber(String documentNumber) throws Exception;
+  Mono<Void> delete(Account account);
 }
